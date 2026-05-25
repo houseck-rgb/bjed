@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>핵심 발주 기준 SOP</title>
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/png" href="./hm1.png">
+<link rel="apple-touch-icon" href="./hm1.png">
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#f5f7fa;
+  font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;
+  color:#111;
+}
+.container{
+  max-width:760px;
+  margin:0 auto;
+  padding:18px 16px 46px;
+}
+.header{
+  background:#fff;
+  border-radius:24px;
+  padding:26px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
+  border:1px solid #e9edf2;
+}
+.topline{
+  font-size:14px;
+  font-weight:1000;
+  letter-spacing:1.2px;
+  margin-bottom:10px;
+  background:linear-gradient(90deg,#5c3b00 0%,#c58a18 25%,#ffe7a3 50%,#b97808 75%,#4d3200 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 2px 10px rgba(197,138,24,.25);
+}
+h1{
+  margin:0;
+  font-size:40px;
+  line-height:1.25;
+  font-weight:1000;
+  letter-spacing:-1px;
+}
+.desc{
+  margin-top:14px;
+  font-size:19px;
+  line-height:1.6;
+  font-weight:700;
+  color:#555;
+}
+.progress-wrap{
+  margin-top:20px;
+  height:16px;
+  background:#edf1f5;
+  border-radius:999px;
+  overflow:hidden;
+}
+.progress{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#5c3b00 0%,#c58a18 25%,#ffe7a3 50%,#b97808 75%,#4d3200 100%);
+box-shadow:0 2px 10px rgba(197,138,24,.35);
+  transition:.35s;
+}
+.card{
+  margin-top:18px;
+  background:#fff;
+  border-radius:26px;
+  padding:28px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
+  border:1px solid #e9edf2;
+  min-height:390px;
+}
+.category{
+  display:inline-flex;
+  padding:10px 18px;
+  border-radius:999px;
+  background:#effaf4;
+  color:#03c75a;
+  font-size:18px;
+  font-weight:900;
+}
+.counter{
+  margin-top:18px;
+  font-size:18px;
+  font-weight:900;
+  color:#888;
+}
+.step{
+  margin-top:30px;
+  font-size:38px;
+  line-height:1.55;
+  font-weight:1000;
+  letter-spacing:-1px;
+  word-break:keep-all;
+}
+.tip{
+  margin-top:26px;
+  padding:18px;
+  background:#f8fafc;
+  border-radius:18px;
+  font-size:18px;
+  line-height:1.6;
+  font-weight:700;
+  color:#555;
+  border:1px solid #edf1f5;
+}
+.btn-area{
+  margin-top:28px;
+}
+.btn{
+  width:100%;
+  border:none;
+  border-radius:20px;
+  padding:24px 20px;
+  font-size:28px;
+  font-weight:1000;
+  cursor:pointer;
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
+}
+.next{
+  background:#03c75a;
+  color:#fff;
+  box-shadow:0 10px 20px rgba(3,199,90,.25);
+}
+.restart{
+  background:#03c75a;
+  color:#fff;
+  box-shadow:0 10px 20px rgba(3,199,90,.25);
+}
+.btn:active{
+  transform:scale(.98);
+}
+.done{
+  text-align:center;
+  padding:46px 10px;
+}
+.done h2{
+  font-size:54px;
+  margin:0;
+  line-height:1.3;
+}
+.done p{
+  font-size:27px;
+  line-height:1.7;
+  font-weight:900;
+  color:#333;
+  margin-top:28px;
+}
+.fx,.boom{
+  position:fixed;
+  pointer-events:none;
+  z-index:9999;
+}
+.fx{
+  font-size:34px;
+  animation:heartUp 1.25s ease-out forwards;
+}
+.boom{
+  font-size:34px;
+  animation:boom .9s ease-out forwards;
+}
+@keyframes heartUp{
+  0%{transform:translateY(0) scale(.45);opacity:0}
+  18%{opacity:1}
+  100%{transform:translateY(-210px) scale(1.25);opacity:0}
+}
+@keyframes boom{
+  0%{transform:scale(.2);opacity:0}
+  30%{opacity:1}
+  100%{transform:scale(2.4) rotate(50deg);opacity:0}
+}
+@media(max-width:480px){
+  .container{padding:14px 12px 40px}
+  .header{padding:22px;border-radius:22px}
+  h1{font-size:31px}
+  .desc{font-size:17px}
+  .card{padding:24px;min-height:360px}
+  .step{font-size:28px;line-height:1.55}
+  .btn{font-size:25px;padding:22px}
+  .done h2{font-size:42px}
+  .done p{font-size:23px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="topline">CHOI WOOYOUNG STANDARD SYSTEM</div>
+    <h1>핵심 발주 기준 SOP</h1>
+    <div class="desc">복잡하지 않은 기준으로<br>누락 없는 발주 운영 시스템 만들기</div>
+    <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+  </div>
+
+  <div class="card" id="card">
+    <div class="category" id="category"></div>
+    <div class="counter" id="counter"></div>
+    <div class="step" id="step"></div>
+    <div class="tip">📌 핵심 : 기억이 아니라 기준과 체크로 운영한다.</div>
+    <div class="btn-area">
+      <button class="btn next" type="button" onclick="nextStep()">다음 기준 보기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const DATA = [["반 이하 원칙", "들어오는 물품이 반 이하로 떨어지면 발주한다."], ["반 이하 원칙", "마지막 1박스를 꺼내는 순간 발주 확인한다."], ["주말·공휴일 기준", "냉동품은 주말 전 미리 한 번 더 체크한다."], ["주말·공휴일 기준", "공휴일·연휴 전은 평소보다 여유 있게 발주한다."], ["주말·공휴일 기준", "말일·우천·행사일은 사용량 증가를 고려한다."], ["실제 수량 확인", "박스만 보지 말고 내부 수량까지 확인한다."], ["실제 수량 확인", "소스류는 뚜껑만 보지 말고 실제 양을 확인한다."], ["실제 수량 확인", "냉장고 안쪽·냉동고 깊숙한 재고까지 확인한다."], ["포장 소모품 기준", "포장용기는 바쁜 주말 전과 긴 연휴 전부터 체크해서 발주한다."], ["포장 소모품 기준", "스티커는 마지막 롤 전 발주한다."], ["포장 소모품 기준", "테이프·랩·봉투도 발주 기준을 만든다."], ["포장 소모품 기준", "아이스팩은 여름철 추가 기준 적용한다."], ["판매 흐름 기준", "인기 메뉴는 하루 판매량 기준으로 계산한다."], ["판매 흐름 기준", "발주량은 감이 아니라 판매 흐름 기준으로 잡는다."], ["판매 흐름 기준", "사용 예정 메뉴 변경 시 발주량도 수정한다."], ["FIFO 원칙", "오래된 재고부터 먼저 사용한다."], ["FIFO 원칙", "냉동 재고는 위치까지 관리한다. 선입선출을 분별한다."], ["체크 기반 운영", "재고 확인은 기억이 아니라 보드판 수시 체크로 관리한다."], ["체크 기반 운영", "발주 후 누락 품목 없는지 다시 확인한다."], ["체크 기반 운영", "홀 재고와 창고 재고를 따로 확인한다."], ["즉시 처리 원칙", "나중에 해야지 하지 말고 꺼낼 때 확인 즉시 발주한다."], ["즉시 처리 원칙", "하루 사용량 급증 시 즉시 공유한다."], ["입고 일정 관리", "입고일을 반드시 확인한다."], ["입고 일정 관리", "거래처 휴무일을 미리 체크한다."], ["입고 일정 관리", "지연 가능 품목은 하루 먼저 발주한다."], ["핵심 기준", "복잡하지 않은 기준이 가장 중요하다."]];
+let idx = 0;
+let locked = false;
+
+const categoryEl = document.getElementById('category');
+const counterEl = document.getElementById('counter');
+const stepEl = document.getElementById('step');
+const progressEl = document.getElementById('progress');
+const cardEl = document.getElementById('card');
+
+function render(){
+  if(idx >= DATA.length){
+    cardEl.innerHTML = `
+      <div class="done">
+        <h2>🎉 교육 완료</h2>
+        <p>기본이 발주를 만들고<br>기준이 매장을 안정시킨다.</p>
+        <div class="btn-area" style="margin-top:40px;">
+          <button class="btn restart" type="button" onclick="restart()">다시하기</button>
+        </div>
+      </div>`;
+    progressEl.style.width = '100%';
+    finalParade();
+    return;
+  }
+  categoryEl.textContent = DATA[idx][0];
+  counterEl.textContent = (idx + 1) + ' / ' + DATA.length;
+  stepEl.textContent = DATA[idx][1];
+  progressEl.style.width = (idx / DATA.length * 100) + '%';
+}
+
+function nextStep(){
+  if(locked) return;
+  locked = true;
+  setTimeout(function(){ locked = false; }, 350);
+  play();
+  vibrate([120,40,180,40,260]);
+  hearts();
+  idx++;
+  render();
+}
+
+function restart(){
+  idx = 0;
+  locked = false;
+  play();
+  vibrate([260,80,260,80,320]);
+  location.reload();
+}
+
+function hearts(){
+  const positions = [18, 50, 82];
+  for(let i=0; i<3; i++){
+    const h = document.createElement('div');
+    h.className = 'fx';
+    h.textContent = '❤️';
+    h.style.left = positions[i] + '%';
+    h.style.bottom = '24px';
+    h.style.animationDelay = (i * 0.08) + 's';
+    document.body.appendChild(h);
+    setTimeout(function(){ h.remove(); }, 1500);
+  }
+}
+
+function finalHearts(){
+  const icons = ['💚','✨','🎉','⭐','💛','🎊'];
+  for(let i=0; i<8; i++){
+    const h = document.createElement('div');
+    h.className = 'fx';
+    h.textContent = icons[i % icons.length];
+    h.style.left = (10 + Math.random() * 80) + '%';
+    h.style.bottom = '40px';
+    document.body.appendChild(h);
+    setTimeout(function(){ h.remove(); }, 1500);
+  }
+}
+
+function fireworks(){
+  const icons = ['🎊','✨','💥','🎉'];
+  for(let i=0; i<16; i++){
+    const f = document.createElement('div');
+    f.className = 'boom';
+    f.textContent = icons[i % icons.length];
+    f.style.left = (10 + Math.random() * 80) + '%';
+    f.style.top = (15 + Math.random() * 70) + '%';
+    document.body.appendChild(f);
+    setTimeout(function(){ f.remove(); }, 1000);
+  }
+}
+
+function finalParade(){
+  for(let r=0; r<5; r++){
+    setTimeout(function(){
+      play();
+      finalHearts();
+      fireworks();
+      vibrate([220,40,320]);
+    }, r * 360);
+  }
+}
+
+function vibrate(pattern){
+  if(navigator.vibrate) navigator.vibrate(pattern);
+}
+
+function audio(){
+  const A = window.AudioContext || window.webkitAudioContext;
+  if(!window._ac) window._ac = new A();
+  return window._ac;
+}
+
+function tone(freq, start, dur, type='triangle', gain=.07){
+  const c = audio();
+  const o = c.createOscillator();
+  const g = c.createGain();
+  o.type = type;
+  o.frequency.setValueAtTime(freq, c.currentTime + start);
+  g.gain.setValueAtTime(0, c.currentTime + start);
+  g.gain.linearRampToValueAtTime(gain, c.currentTime + start + .01);
+  g.gain.exponentialRampToValueAtTime(.001, c.currentTime + start + dur);
+  o.connect(g).connect(c.destination);
+  o.start(c.currentTime + start);
+  o.stop(c.currentTime + start + dur);
+}
+
+function play(){
+  tone(523,0,.12);
+  tone(659,.06,.12);
+  tone(784,.12,.15);
+  tone(1046,.20,.18,'sine',.06);
+  tone(1318,.28,.20,'sine',.05);
+}
+
+render();
+</script>
+</body>
+</html>
